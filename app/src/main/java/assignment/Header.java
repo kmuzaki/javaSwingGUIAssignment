@@ -7,7 +7,7 @@ public class Header {
     JPanel createHeader() {
         JPanel header = new JPanel();
         header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
-        header.setBackground(Color.BLACK);
+        header.setBackground(Color.BLUE);
         header.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JLabel logo = new JLabel("Rollercoaster Tycoon Classic: Rides list");
@@ -17,9 +17,7 @@ public class Header {
 
         header.add(Box.createHorizontalGlue()); // Pushes the logo to the left
 
-        JLabel searchBar = new JLabel("Search Bar");
-        searchBar.setForeground(Color.WHITE);
-        header.add(searchBar);
+        header.add(navButtons.createNavButtons()); // Add the navigation buttons
 
         return header;
     }
