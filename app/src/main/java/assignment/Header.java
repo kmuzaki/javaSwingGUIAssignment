@@ -7,7 +7,7 @@ public class Header {
     JPanel createHeader() {
         JPanel header = new JPanel();
         header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
-        header.setBackground(Color.BLUE);
+        header.setBackground(Color.DARK_GRAY);
         header.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JLabel logo = new JLabel("Rollercoaster Tycoon Classic: Rides list");

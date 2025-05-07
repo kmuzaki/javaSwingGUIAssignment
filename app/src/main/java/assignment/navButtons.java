@@ -6,7 +6,7 @@ import java.awt.*;
 public class navButtons{
     static JPanel createNavButtons() {
         JPanel navButtons = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        navButtons.setBackground(Color.BLUE);
+        navButtons.setBackground(Color.DARK_GRAY);
 
         // Create youtube Button
         JButton yt = new JButton("YouTube");
