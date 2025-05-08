@@ -14,9 +14,13 @@ public class App extends JFrame{
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
 
-        // Create a label and add it to the panel
-        JLabel label = new JLabel("Hello, World!", SwingConstants.CENTER);
-        panel.add(label, BorderLayout.CENTER);
+        // Create a rides card grid and scroll bar
+        JScrollPane scrollPane = new JScrollPane(new RidesGrid().createGrid());
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.setWheelScrollingEnabled(true);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(40);
+
+        panel.add(scrollPane);
         
         Sidebar sidebar = new Sidebar();
         panel.add(sidebar.createSidebar(), BorderLayout.WEST);
