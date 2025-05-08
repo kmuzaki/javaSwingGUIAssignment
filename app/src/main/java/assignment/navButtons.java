@@ -12,7 +12,7 @@ public class navButtons{
         JButton yt = new JButton("YouTube");
         yt.setBackground(Color.RED);
         yt.setForeground(Color.WHITE);
-        yt.setFont(new Font("Arial", Font.PLAIN, 15));
+        yt.setFont(new Font("Arial", Font.BOLD, 15));
         yt.setFocusPainted(false);
         yt.setBorderPainted(false);
 
@@ -20,8 +20,8 @@ public class navButtons{
 
         JButton kofi = new JButton("Kofi");
         kofi.setBackground(Color.ORANGE);
-        kofi.setForeground(Color.WHITE);
-        kofi.setFont(new Font("Arial", Font.PLAIN, 15));
+        kofi.setForeground(Color.BLACK);
+        kofi.setFont(new Font("Arial", Font.BOLD, 15));
         kofi.setFocusPainted(false);
         kofi.setBorderPainted(false);
 
