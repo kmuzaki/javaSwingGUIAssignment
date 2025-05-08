@@ -12,7 +12,7 @@ public class Header {
 
         JLabel logo = new JLabel("Rollercoaster Tycoon Classic: Rides list");
         logo.setForeground(Color.WHITE);
-        logo.setFont(new Font("Arial", Font.BOLD, 15));
+        logo.setFont(new Font("SansSerif", Font.BOLD, 20));
         header.add(logo);
 
         header.add(Box.createHorizontalGlue()); // Pushes the logo to the left

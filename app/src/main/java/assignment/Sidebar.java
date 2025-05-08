@@ -16,16 +16,16 @@ public class Sidebar extends Button{
         JPanel sidebar = new JPanel();
         sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
         sidebar.setBackground(Color.BLACK);
+        sidebar.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         // sidebar.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         for (int i = 0; i < buttons.length; i++) {
             // Create buttons using looping
             JButton button = createButton(buttons[i]);
             button.setBackground(Color.GRAY);
-            button.setForeground(Color.WHITE);
-            button.setFont(new Font("Arial", Font.PLAIN, 15));
+            button.setForeground(Color.BLACK);
+            button.setFont(new Font("Arial", Font.BOLD, 15));
             button.setFocusPainted(false);
-            button.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10)); // Add padding inside the button
             button.setBorderPainted(false);
             button.setAlignmentX(Component.CENTER_ALIGNMENT);
 
