@@ -2,6 +2,10 @@ package assignment;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class navButtons{
     static JPanel createNavButtons() {
@@ -15,6 +19,17 @@ public class navButtons{
         yt.setFont(new Font("Arial", Font.BOLD, 15));
         yt.setFocusPainted(false);
         yt.setBorderPainted(false);
+        yt.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Desktop.getDesktop().browse(new URI("https://www.youtube.com/@swift_2845"));
+                } catch (IOException | URISyntaxException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            }
+        });
+
 
         // Create Kofi
 
@@ -24,6 +39,16 @@ public class navButtons{
         kofi.setFont(new Font("Arial", Font.BOLD, 15));
         kofi.setFocusPainted(false);
         kofi.setBorderPainted(false);
+        kofi.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Desktop.getDesktop().browse(new URI("https://ko-fi.com/"));
+                } catch (IOException | URISyntaxException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            }
+        });
 
         navButtons.add(yt);
         navButtons.add(kofi);
