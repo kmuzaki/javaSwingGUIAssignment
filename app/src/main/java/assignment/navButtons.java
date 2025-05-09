@@ -1,3 +1,8 @@
+/* References:
+stackoverflow, https://stackoverflow.com/questions/527719/how-to-add-hyperlink-in-jlabel
+codeJava, https://www.codejava.net/java-se/swing/how-to-create-hyperlink-with-jlabel-in-java-swing
+ */
+
 package assignment;
 
 import javax.swing.*;
