@@ -7,18 +7,25 @@ package assignment;
 import javax.swing.*;
 import java.awt.*;
 
-public class TransportRides extends JButton{
+public class ThrillRides extends JButton {
     JPanel createGrid() {
-        String[] rides = {"Steam Trains", 
-        "Chair lift cars"
+        String[] rides = {
+                "Twist",
+                "Pirate Ship",
+                "Go karts",
         };
 
-        String[] paths = {"/cardIcons/steamTrains.png",
-        "/cardIcons/flyover.png"
+        String[] paths = {
+                "/cardIcons/twist.png",
+                "/cardIcons/pirateShip.png",
+                "/cardIcons/goKarts.png",
         };
 
-        String[] links = {"https://rct.fandom.com/wiki/Miniature_Railway",
-            "https://rct.fandom.com/wiki/Chairlift",
+        String[] links = {
+                "https://rct.fandom.com/wiki/Twist",
+                "https://rct.fandom.com/wiki/Pirate_Ship",
+                "https://rct.fandom.com/wiki/Go_Karts",
+                
         };
 
         // JPanel gridPanel = new JPanel();

@@ -8,12 +8,11 @@ package assignment;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Sidebar extends Button{
-    String[] buttons = {"Home", "Transport Rides", "Gentle Rides", "Roller Coasters", "Thrill Rides", "Water Rides", "Shops and Stalls",};
+    String[] buttons = {"Home", "Transport Rides", "Gentle Rides", "Roller Coasters", "Thrill Rides", "Water Rides"};
 
-    JPanel createSidebar(){
+    JPanel createSidebar(JScrollPane oldCardsGrid, JPanel oldPanel){
         JPanel sidebar = new JPanel();
         sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
         sidebar.setBackground(Color.BLACK);
@@ -21,7 +20,7 @@ public class Sidebar extends Button{
         // sidebar.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         for (int i = 0; i < buttons.length; i++) {
-            JButton button = createButton(buttons[i]);
+            JButton button = createButton(buttons[i], oldCardsGrid, oldPanel);
             sidebar.add(button);
             sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
         }
@@ -30,7 +29,7 @@ public class Sidebar extends Button{
     }
 
     @Override
-    public JButton createButton(String text) {
+    public JButton createButton(String text, JScrollPane oldCardsGrid, JPanel oldPanel) {
         JButton button = new JButton(text);
         button.setBackground(Color.GRAY);
         button.setForeground(Color.BLACK);
@@ -38,18 +37,13 @@ public class Sidebar extends Button{
         button.setFocusPainted(false);
         button.setBorderPainted(false);
         button.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        // Set button size
-        Dimension buttonSize = new Dimension(300, 50); // Choose your consistent size
-        button.setMaximumSize(buttonSize);             // Important for BoxLayout Y_AXIS
-
-        button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
-                //Show message dialog for full information for ride
-                System.out.println(button.getText() + " is pressed!");
-            }
-        });
-
+    
+        Dimension buttonSize = new Dimension(300, 50);
+        button.setMaximumSize(buttonSize);
+    
+        button.addActionListener(new Listener(oldPanel)); // Only pass the panel now
+    
         return button;
     }
+    
 }
